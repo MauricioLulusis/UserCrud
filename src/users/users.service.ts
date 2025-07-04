@@ -10,8 +10,7 @@ export class UsersService {
 constructor(
   @InjectRepository(User)
   private usersRepository:Repository<User>
-){
-  
+){  
 }
 
   async create(createUserDto: CreateUserDto) {
@@ -19,7 +18,7 @@ constructor(
   }
 
   async findAll() {
-    return await `This action returns all users`;
+    return await this.usersRepository.find();
   }
 
   async findOne(id: number) {
