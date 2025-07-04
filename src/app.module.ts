@@ -14,7 +14,10 @@ import { User } from './users/entities/user.entity';
     password:'Nicolas..8', 
     database:'USER-CRUD',
     entities:[User],
-    synchronize:true
+    synchronize:true,
+    extra :{
+      trustServerCertificate:true,
+    }
   }), UsersModule],
   controllers: [AppController],
   providers: [AppService],
